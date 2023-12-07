@@ -13,6 +13,7 @@ module.exports.compile = async function compile(routes) {
   return new Promise((resolve, reject) => {
     compiler.run((err, stats) => {
       if (err || stats.hasErrors()) {
+        console.log(err)
         error(err);
         error(
           stats.toString({
