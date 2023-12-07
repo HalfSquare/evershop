@@ -12,8 +12,8 @@ module.exports.compile = async function compile(routes) {
   const compiler = webpack(config);
   return new Promise((resolve, reject) => {
     compiler.run((err, stats) => {
+      console.log(err, stats)
       if (err || stats.hasErrors()) {
-        console.log(err)
         error(err);
         error(
           stats.toString({
