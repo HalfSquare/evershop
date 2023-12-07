@@ -51,7 +51,7 @@ function error(e) {
     // eslint-disable-next-line no-console
     console.log(`\n❌ ${red(e.stack)}`);
   } else {
-    throw new Error('Error message must be a string or an Error object');
+    throw new Error(`Error message must be a string or an Error object ${e}`);
   }
 }
 
